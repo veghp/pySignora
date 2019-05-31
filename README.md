@@ -8,13 +8,14 @@ A *pathway* here is defined as a set of genes with the same pathway-ontology ann
 For more details, see the inventors' original publication: https://peerj.com/articles/229/
 
 The two core functions, GPS-generation and signature ORA, have been implemented, but the package is still **under development** and many important features will be added in the future:
+
 * Multiple-testing correction
 * KEGG, Reactome, GO and other databases
 * Handling hierarchical (multilevel) repositories
 
 
 ## Usage
-The input pandas dataframe (`repodf`) has 3 columns: pathway, desccription, gene, e.g.:
+The input pandas dataframe (`repodf`) must have 3 columns: pathway, description, gene, e.g.:
 ```python
 import pandas as pd
 repodf[:3]
