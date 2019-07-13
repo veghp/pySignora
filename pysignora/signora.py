@@ -47,8 +47,12 @@ def signora(genelist, gps):
     for i, p in enumerate(repo_pw):
         pvalues[i] = 1 - stats.hypergeom.cdf(x_vector[i], M, n_vector[i], N)
 
+    ntests = len(pvalues)
+    bonferroni = pvalues * float(ntests)
+
     d = {'Pathway': pd.Series(repo_pw, index=repo_pw),
-         'Pvalue': pd.Series(pvalues, index=repo_pw)}
+         'Pvalue': pd.Series(pvalues, index=repo_pw),
+         'Pvalue_corr': pd.Series(bonferroni, index=repo_pw)}
     results = pd.DataFrame(d)
 
     return results
