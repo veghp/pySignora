@@ -30,3 +30,15 @@ import pysignora as ps
 gps = ps.makegps(repodf)
 res = ps.signora(genelist, gps)
 ```
+
+
+## Versioning
+
+pySignora uses the [semantic versioning](https://semver.org) scheme.
+
+
+## License = GPLv3+
+
+pySignora is [free software](https://www.gnu.org/philosophy/free-sw.en.html), which means the users have the freedom to run, copy, distribute, study, change and improve the software.
+
+pySignora was written by [Peter Vegh](https://github.com/veghp) and is released under the GPLv3+ license.

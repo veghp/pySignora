@@ -3,15 +3,20 @@ import setuptools
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
+version = {}
+with open("pysignora/version.py") as fp:
+    exec(fp.read(), version)
+
 setuptools.setup(
     name="pysignora",
-    version="0.1.0",
+    version=version["__version__"],
     author="Peter Vegh",
-    author_email="peter.vegh@newcastle.ac.uk",
     description="Pathway gene-pair signature overrepresentation analysis",
     long_description=long_description,
     long_description_content_type="text/markdown",
+    license="GPLv3+",
     url="https://github.com/veghp/pySignora",
+    keywords="biology",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
